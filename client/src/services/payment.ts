@@ -1,9 +1,11 @@
+const API_URL = "https://paystack-payment-gateway-sjzh.onrender.com";
+
 export async function initializePayment(
   email: string,
   amount: number
 ) {
   const response = await fetch(
-    "http://localhost:5000/api/payments/initialize",
+    `${API_URL}/api/payments/initialize`,
     {
       method: "POST",
       headers: {
